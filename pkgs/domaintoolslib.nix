@@ -17,4 +17,5 @@ python3Packages.buildPythonPackage rec {
     requests
   ];
   doCheck = false;
+  format = "setuptools";
 }

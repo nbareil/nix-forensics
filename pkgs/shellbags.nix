@@ -19,4 +19,5 @@ python2Packages.buildPythonPackage rec {
       six
     ];
     doCheck = false;
+    format = "setuptools";
   }

@@ -12,5 +12,6 @@ python3Packages.buildPythonPackage rec {
     sha256 = "sha256-obPculLv8rGAit94CjlyzBDeo6CAO2Ayr1LCixcAtkA=";
   };
   
+  format = "setuptools";
   doCheck = false;
 }

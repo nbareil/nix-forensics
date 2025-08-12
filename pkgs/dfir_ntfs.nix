@@ -16,5 +16,6 @@ python3Packages.buildPythonPackage rec {
     fuse
   ];
   
+  format = "setuptools";
   doCheck = false;
 }

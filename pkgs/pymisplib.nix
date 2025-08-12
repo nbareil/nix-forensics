@@ -16,4 +16,5 @@ python3Packages.buildPythonPackage rec {
       jsonschema
     ];
     doCheck = false;
+    format = "setuptools";
   }

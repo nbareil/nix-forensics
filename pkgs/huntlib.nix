@@ -24,4 +24,5 @@ python3Packages.buildPythonPackage rec {
     ]) ++ [ splunklib domaintoolslib pymisplib ];
 
     doCheck = false;
+    format = "setuptools";
   }

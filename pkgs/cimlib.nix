@@ -17,6 +17,7 @@ let
     }; 
 
     doCheck = false;
+    format = "setuptools";
   };
 
   python-cim = python3Packages.buildPythonPackage {
@@ -28,6 +29,7 @@ let
       hash = "sha256-u+ibNpNo5ZhQVrexqSyJmlfPBO7xH/lz37Of2CsNbuA=";
     };
 
+    format = "setuptools";
     propagatedBuildInputs = with python3Packages; [
       hexdump
       funcy
@@ -49,6 +51,7 @@ python3Packages.buildPythonPackage rec {
     hash = "sha256-N1DkQHGw+lcLo1jyFmQcw/jtcC+UbDwxQK7LhzLj1rE=";
   };
 
+  format = "setuptools";
   propagatedBuildInputs = [
     python-cim
   ];

@@ -13,6 +13,7 @@ let
           hash = "sha256-Z+4saaEb2twHBcfg3g/xbvdLcwkyU34irB9k9HkkD/o=";
         };
     
+        format = "setuptools";
         doCheck = false;
       };
 
@@ -30,6 +31,7 @@ let
           construct
         ];
 
+        format = "setuptools";
         doCheck = false;
       };
     };

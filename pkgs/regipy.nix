@@ -21,4 +21,6 @@ python3Packages.buildPythonPackage rec {
       tabulate
     ]) ++ [ libfwsi ];
     doCheck = false;
+
+    format = "setuptools";
 }

@@ -19,4 +19,5 @@ python3Packages.buildPythonPackage rec {
       astunparse
     ];
     doCheck = false;
+    format = "setuptools";
   }
