@@ -155,42 +155,41 @@
             at_jobs_carver ccm_rua_finder registryFlush forensicslab
             # Expose the custom python env and docker image
             customPython docker;
+
           default = pkgs.customPython;
+
+          all = with self.packages.${pkgs.system}; [
+               customPython
+               evtxTools
+               evtx-tools
+               usnrs
+               INDXRipper
+               INDXParse
+               CobaltStrikeParser
+               libvmdk
+               libmsiecf
+               libvhdi
+               libvshadow
+               liblnk
+               libesedb
+               cimlib
+               bits_parser
+               at_jobs_carver
+               ccm_rua_finder
+               forensicslab
+               notatin
+               shimCacheParser
+               dfir_ntfs
+               yarp
+               regrippy
+               regipy
+               amcacheparser
+               registryFlush
+               my-python-registry
+            ];
         };
 
 
-        all = pkgs.symlinkJoin {
-          name = "nix-forensics-all";
-          paths = [
-             self.packages.${pkgs.system}.customPython
-             self.packages.${pkgs.system}.evtxTools
-             self.packages.${pkgs.system}.evtx-tools
-             self.packages.${pkgs.system}.usnrs
-             self.packages.${pkgs.system}.INDXRipper
-             self.packages.${pkgs.system}.INDXParse
-             self.packages.${pkgs.system}.CobaltStrikeParser
-             self.packages.${pkgs.system}.libvmdk
-             self.packages.${pkgs.system}.libmsiecf
-             self.packages.${pkgs.system}.libvhdi
-             self.packages.${pkgs.system}.libvshadow
-             self.packages.${pkgs.system}.liblnk
-             self.packages.${pkgs.system}.libesedb
-             self.packages.${pkgs.system}.cimlib
-             self.packages.${pkgs.system}.bits_parser
-             self.packages.${pkgs.system}.at_jobs_carver
-             self.packages.${pkgs.system}.ccm_rua_finder
-             self.packages.${pkgs.system}.forensicslab
-             self.packages.${pkgs.system}.notatin
-             self.packages.${pkgs.system}.shimCacheParser
-             self.packages.${pkgs.system}.dfir_ntfs
-             self.packages.${pkgs.system}.yarp
-             self.packages.${pkgs.system}.regrippy
-             self.packages.${pkgs.system}.regipy
-             self.packages.${pkgs.system}.amcacheparser
-             self.packages.${pkgs.system}.registryFlush
-             self.packages.${pkgs.system}.my-python-registry
-          ];
-        };
 
         # Define the development shell, accessible via `nix develop`
         devShells.default = pkgs.mkShell {
