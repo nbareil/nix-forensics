@@ -217,7 +217,7 @@
           default = pkgs.customPython;
 
           all = with pkgs; [
-               customPython
+               #customPython
                evtxTools
                usnrs
                INDXRipper
