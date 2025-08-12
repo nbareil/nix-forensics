@@ -22,7 +22,6 @@ python3Packages.buildPythonPackage rec {
   propagatedBuildInputs = with python3Packages; [
     jinja2
     fuse
-    enum-compat
   ];
   
   doCheck = false;
