@@ -84,11 +84,26 @@
           regipy = prev.callPackage ./pkgs/regipy.nix { inherit (final) libfwsi; };
           netstructlib = prev.callPackage ./pkgs/netstructlib.nix {};
           CobaltStrikeParser = prev.callPackage ./pkgs/CobaltStrikeParser.nix { inherit (final) netstructlib; };
-          domaintoolslib = prev.callPackage ./pkgs/domaintoolslib.nix {};
-          pymisplib = prev.callPackage ./pkgs/pymisplib.nix {};
-          splunklib = prev.callPackage ./pkgs/splunklib.nix {};
+          
+          # --- Create a dedicated Python 3.11 package set only for huntlib ---
+          # huntlib depends on the future package that is deprecated on Python 3.13
+          python311Packages = prev.python311.pkgs;
+          domaintoolslib = prev.callPackage ./pkgs/domaintoolslib.nix {
+            python3Packages = final.python311Packages;
+          };
+          pymisplib = prev.callPackage ./pkgs/pymisplib.nix {
+            python3Packages = final.python311Packages;
+          };
+          splunklib = prev.callPackage ./pkgs/splunklib.nix {
+            python3Packages = final.python311Packages;
+          };
+          huntlib = prev.callPackage ./pkgs/huntlib.nix {
+            python3Packages = final.python311Packages; # Use the py3.11 set
+            # Pass its dependencies, which are now also built with py3.11
+            inherit (final) splunklib domaintoolslib pymisplib;
+          };
+          # --- End dedicated Python 3.11 ---
           pdoclib = prev.callPackage ./pkgs/pdoclib.nix {};
-          huntlib = prev.callPackage ./pkgs/huntlib.nix { inherit (final) splunklib domaintoolslib pymisplib; };
           evtxTools = prev.callPackage ./pkgs/evtxTools.nix {};
           usnrs = prev.callPackage ./pkgs/usnrs.nix {};
           liblnk-python = prev.python3Packages.toPythonModule final.liblnk;
@@ -152,7 +167,7 @@
             # Expose all the main tools
             INDXParse INDXRipper dfir_ntfs yarp cimlib shimCacheParser regrippy regipy
             CobaltStrikeParser evtxTools usnrs timeliner amcacheparser bits_parser
-            at_jobs_carver ccm_rua_finder registryFlush forensicslab
+            at_jobs_carver ccm_rua_finder registryFlush forensicslab huntlib
             # Expose the custom python env and docker image
             customPython docker;
 

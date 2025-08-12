@@ -13,6 +13,7 @@ python3Packages.buildPythonPackage rec {
     };
 
     propagatedBuildInputs = (with python3Packages; [
+      pytest-runner
       numpy
       pandas
       tqdm
