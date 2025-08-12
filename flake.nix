@@ -161,7 +161,6 @@
           all = with self.packages.${pkgs.system}; [
                customPython
                evtxTools
-               evtx-tools
                usnrs
                INDXRipper
                INDXParse
