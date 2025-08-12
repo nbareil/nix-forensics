@@ -15,7 +15,7 @@ rustPlatform.buildRustPackage rec {
       sha256 = "sha256-zBSMIXRjAGuerkaTIGgn7TCrVnxprrXCIjV5OFIvMuU=";
     };
 
-    cargoSha256 = "sha256-Ogp5e4Ai4xzEUPT/tGEN+zG2GMTcDkvCftG5NJLliZ8=";
+    cargoHash = "sha256-Ogp5e4Ai4xzEUPT/tGEN+zG2GMTcDkvCftG5NJLliZ8=";
 
     meta = {
       description = "A cross-platform parser for the Windows USN Journal format";
