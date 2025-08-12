@@ -165,6 +165,30 @@
         packages = {
           inherit (pkgs)
             # Expose all the main tools
+               #usnrs
+               #INDXRipper
+               #INDXParse
+               #CobaltStrikeParser
+               #libvmdk
+               #libmsiecf
+               #libvhdi
+               #libvshadow
+               #liblnk
+               #libesedb
+               #cimlib
+               #bits_parser
+               #at_jobs_carver
+               #ccm_rua_finder
+               #forensicslab
+               #shimCacheParser
+               #dfir_ntfs
+               #yarp
+               #regrippy
+               #regipy
+               #amcacheparser
+               #registryFlush
+               customPython
+               evtxTools
                usnrs
                INDXRipper
                INDXParse
@@ -188,7 +212,7 @@
                amcacheparser
                registryFlush
             # Expose the custom python env and docker image
-            customPython docker;
+            docker;
 
           default = pkgs.customPython;
 
