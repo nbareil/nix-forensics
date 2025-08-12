@@ -1,7 +1,6 @@
 { python3Packages
 , fetchFromGitHub
 , stdenv
-, python3
 }:
 stdenv.mkDerivation rec {
   name = "INDXRipper";
@@ -21,7 +20,7 @@ stdenv.mkDerivation rec {
   patchPhase = ''
     runHook prePatch
 
-    sed -i '1 i\#!/usr/bin/env python3' INDXRipper.py
+    sed -i '1 i\#!/usr/bin/env python' INDXRipper.py
     patchShebangs INDXRipper.py
 
     runHook postPatch

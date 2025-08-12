@@ -1,7 +1,7 @@
 { stdenv
 , fetchurl
-, fuse
 , python3
+, fuse
 , lib
 , fetchgit
 , automake
@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
       gettext
     ];
 
-    buildInputs = [ fuse python3 libbfio libcdata libcerror libcfile libclocale libcnotify libcpath libcsplit libcthreads libfcache libfdata libfdatetime libfguid libfusn libfwnt libhmac libuna];
+    buildInputs = [ fuse libbfio libcdata libcerror libcfile libclocale libcnotify libcpath libcsplit libcthreads libfcache libfdata libfdatetime libfguid libfusn libfwnt libhmac libuna];
 
     preConfigure = ''
       for i in  libbfio libcdata libcerror libcfile libclocale libcnotify libcpath libcsplit libcthreads libfcache libfdata libfdatetime libfguid libfusn libfwnt libhmac libuna; do

@@ -1,6 +1,6 @@
 { stdenv
 , fetchFromGitHub
-, python
+, python3
 }:
 stdenv.mkDerivation {
   pname = "ccm-rua-finder";
@@ -15,7 +15,7 @@ stdenv.mkDerivation {
 
   buildPhase = ''
     substituteInPlace CCM_RUA_Finder.py \
-      --replace '#!/usr/bin/env python' '#!${python}/bin/python2'
+      --replace '#!/usr/bin/env python' '#!${python3}'
   '';
 
   installPhase = ''

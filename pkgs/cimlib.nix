@@ -1,4 +1,5 @@
 { fetchzip
+, python3
 , fetchPypi
 , fetchFromGitHub
 , stdenv
@@ -35,7 +36,7 @@ let
       funcy
       intervaltree
     ] ++ [ vivisect-vstruct-wb ];
-    
+
     doCheck = false;
   };
 in
@@ -63,7 +64,7 @@ python3Packages.buildPythonPackage rec {
   patchPhase = ''
     runHook prePatch
 
-    sed -i '1 i\#!/usr/bin/env python3' samples/*.py
+    sed -i '1 i\#!${python3}' samples/*.py
 
     runHook postPatch
   '';

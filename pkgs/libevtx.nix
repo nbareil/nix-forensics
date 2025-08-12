@@ -1,7 +1,7 @@
 { stdenv
 , fetchurl
-, fuse
 , python3
+, fuse
 , lib
 , fetchgit
 , automake

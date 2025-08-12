@@ -1,11 +1,11 @@
 { stdenv
 , fetchurl
 , fuse
-, python3
 , lib
 , fetchgit
 , automake
 , autoconf
+, python3
 , libtool
 , pkg-config
 , gettext
