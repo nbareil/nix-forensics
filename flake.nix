@@ -217,7 +217,7 @@
           default = pkgs.customPython;
 
           all = with pkgs; [
-               #customPython
+               customPython
                evtxTools
                usnrs
                INDXRipper
@@ -232,16 +232,6 @@
                cimlib
                bits_parser
                at_jobs_carver
-               ccm_rua_finder
-               forensicslab
-               shimCacheParser
-               dfir_ntfs
-               yarp
-               regrippy
-               regipy
-               amcacheparser
-               registryFlush
-               my-python-registry
             ];
         };
 

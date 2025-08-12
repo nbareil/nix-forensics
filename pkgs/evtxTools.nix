@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage rec {
       sha256 = "sha256-aa04Ia11+Ae1amc3JAtYdSWf+f/fenTt0Bny/AauaHo=";
     };
 
-    cargoHash = "sha256-pfTWbMWLdzA+AIZRmQebNh1vroVDxjaJjxxlm1fPdPY=";
+    cargoHash = "sha256-6ixxHcHks4us2AoJLq5fxFTfmtP4S0ugNPSGOaWGzXk=";
 
     meta = {
       description = "A cross-platform parser for the Windows XML EventLog format";
