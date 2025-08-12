@@ -165,73 +165,62 @@
         packages = {
           inherit (pkgs)
             # Expose all the main tools
-               #usnrs
-               #INDXRipper
-               #INDXParse
-               #CobaltStrikeParser
-               #libvmdk
-               #libmsiecf
-               #libvhdi
-               #libvshadow
-               #liblnk
-               #libesedb
-               #cimlib
-               #bits_parser
-               #at_jobs_carver
-               #ccm_rua_finder
-               #forensicslab
-               #shimCacheParser
-               #dfir_ntfs
-               #yarp
-               #regrippy
-               #regipy
-               #amcacheparser
-               #registryFlush
-               customPython
-               evtxTools
-               usnrs
-               INDXRipper
-               INDXParse
-               CobaltStrikeParser
-               libvmdk
-               libmsiecf
-               libvhdi
-               libvshadow
-               liblnk
-               libesedb
-               cimlib
-               bits_parser
-               at_jobs_carver
-               ccm_rua_finder
-               forensicslab
-               shimCacheParser
-               dfir_ntfs
-               yarp
-               regrippy
-               regipy
-               amcacheparser
-               registryFlush
+            customPython
+            evtxTools
+            usnrs
+            INDXRipper
+            INDXParse
+            CobaltStrikeParser
+            libvmdk
+            libmsiecf
+            libvhdi
+            libvshadow
+            liblnk
+            libesedb
+            cimlib
+            bits_parser
+            at_jobs_carver
+            ccm_rua_finder
+            forensicslab
+            shimCacheParser
+            dfir_ntfs
+            yarp
+            regrippy
+            regipy
+            amcacheparser
+            registryFlush
+            my-python-registry
             # Expose the custom python env and docker image
             docker;
 
           default = pkgs.customPython;
 
           all = with pkgs; [
-               customPython
-               evtxTools
-               usnrs
-               INDXRipper
-               INDXParse
-               CobaltStrikeParser
-               libvmdk
-               libmsiecf
-               libvhdi
-               libvshadow
-               liblnk
-               libesedb
-               cimlib
-               bits_parser
-               at_jobs_carver
+            customPython
+            evtxTools
+            usnrs
+            INDXRipper
+            INDXParse
+            CobaltStrikeParser
+            libvmdk
+            libmsiecf
+            libvhdi
+            libvshadow
+            liblnk
+            libesedb
+            cimlib
+            bits_parser
+            at_jobs_carver
+            ccm_rua_finder
+            forensicslab
+            shimCacheParser
+            dfir_ntfs
+            yarp
+            regrippy
+            regipy
+            amcacheparser
+            registryFlush
+            my-python-registry
             ];
         };
 

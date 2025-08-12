@@ -3,19 +3,19 @@
 }:
 rustPlatform.buildRustPackage rec {
     pname = "usnrs";
-    version = "v0.1.0";
+    name = "usnrs";
 
     buildFeatures = [ "usnrs-cli" ];
 
     src = fetchFromGitHub {
-      inherit pname version;
+      inherit pname name;
       owner = "airbus-cert";
       repo = pname;
-      rev = version;
-      sha256 = "sha256-zBSMIXRjAGuerkaTIGgn7TCrVnxprrXCIjV5OFIvMuU=";
+      rev = "1bb32673d703aaa7a1dc67f6211457728c7b7043";
+      sha256 = "sha256-VDxm8XlTc9raXP6naMWlKzff7SErwhnPVpEtCvYM1Kg=";
     };
 
-    cargoHash = "sha256-PX2CCs+ZvoeHizopHbccvaJHXkp6/h3Je3271uRFyB0=";
+    cargoHash = "sha256-bKDbVgQ8aHjpOtkw8YcFpFKKj8ouQL44MGdvw1pOmEs=";
 
     meta = {
       description = "A cross-platform parser for the Windows USN Journal format";

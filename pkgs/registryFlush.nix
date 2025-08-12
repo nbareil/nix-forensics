@@ -1,4 +1,4 @@
-{ python3
+{ python
 , stdenv
 , yarp
 , fetchurl
@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
   dontUnpack = true;
   dontBuild = true;
 
-  buildInputs = [ python3 ];
+  buildInputs = [ python ];
   propagatedBuildInputs = [ yarp ];
   nativeBuildInputs = [ wrapPython ];
 
