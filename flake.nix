@@ -176,7 +176,6 @@
                at_jobs_carver
                ccm_rua_finder
                forensicslab
-               notatin
                shimCacheParser
                dfir_ntfs
                yarp
