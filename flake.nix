@@ -158,7 +158,7 @@
 
           default = pkgs.customPython;
 
-          all = with self.packages.${pkgs.system}; [
+          all = with pkgs; [
                customPython
                evtxTools
                usnrs

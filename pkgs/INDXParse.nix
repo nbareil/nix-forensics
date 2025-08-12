@@ -16,7 +16,9 @@ python3Packages.buildPythonPackage rec {
     # Fix list_mft sometimes choking on bad UTF-16 strings
     sed -i 's/decode("utf-16le")/decode("utf-16le", "backslashreplace")/' indxparse/BinaryParser.py
   '';
-  
+
+  format = "setuptools";
+
   propagatedBuildInputs = with python3Packages; [
     jinja2
     fuse
